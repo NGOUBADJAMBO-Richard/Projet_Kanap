@@ -19,5 +19,16 @@ fetch(apiUrl)
     const product = product.find((product) => product._id === id);
     if (product) {
       console.log(product); // Affichage de l'élément trouvé
+
+      const itemImage = document.querySelector(".itme_img");
+      const ProductImage = document.createElement("img");
+      ProductImage.setAttribute("alt", product.name + "" + "image");
+      ProductImage.setAttribute("src", product.imageUrl);
+      itemImage.appendChild(ProductImage);
+
+      const title = document.getElementById("title");
+      title.innerHTML = product.name;
+
+      const price = document.getElementById("price");
     }
   });
