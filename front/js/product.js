@@ -2,7 +2,7 @@
 const params = new URLSearchParams(document.location.search);
 const id = params.get("id");
 // URL de votre API pour récupérer tous les produits
-const apiUrl = "http://localhost:3000/api/products";
+const apiUrl = "https://projet-kanap.vercel.app/api/products";
 
 // Envoi de la requête à l'API pour récupérer tous les produits
 fetch(apiUrl)
